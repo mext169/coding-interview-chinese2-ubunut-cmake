@@ -1,0 +1,13 @@
+project(coding-interview-chinese2-cmake)
+cmake_minimum_required(VERSION 3.10)
+set(CMAKE_CXX_STANDARD 11)
+
+include_directories(Utilities)
+
+add_executable(01AssignmentOperator 01AssignmentOperator.cpp)
+add_executable(02FindDuplication 02FindDuplication.cpp)
+add_executable(02FindDuplicationNoEdit 02FindDuplicationNoEdit.cpp)
+add_executable(03FindInPartiallySortedMatrix 03FindInPartiallySortedMatrix.cpp)
+add_executable(04ReplaceSpaces 04ReplaceSpaces.cpp)
+add_executable(05PrintListInReversedOrder 05PrintListInReversedOrder.cpp Utilities/List.cpp)
+add_executable(06ConstructBinaryTree 06ConstructBinaryTree.cpp Utilities/BinaryTree.cpp)
