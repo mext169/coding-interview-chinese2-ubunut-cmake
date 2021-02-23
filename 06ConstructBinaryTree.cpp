@@ -22,6 +22,12 @@ https://github.com/zhedahht/CodingInterviewChinese2/blob/master/LICENSE.txt)
 // 2, 4, 7, 3, 5, 6, 8}和中序遍历序列{4, 7, 2, 1, 5, 3, 8, 6}，则重建出
 // 图2.6所示的二叉树并输出它的头结点。
 
+
+// 前序遍历：根、左、右
+// 中序遍历：左、根、右
+// 前序遍历的第一个是根节点，再利用中序遍历划分出根节点的左右子节点
+// 之后再对左右子节点们 递归划分，知道构建了整个二叉树
+
 #include "Utilities/BinaryTree.h"
 #include <stdexcept>
 #include <exception>

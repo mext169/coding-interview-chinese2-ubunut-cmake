@@ -30,6 +30,12 @@ BinaryTreeNode* CreateBinaryTreeNode(int value)
     return pNode;
 }
 
+/**
+ * 将左右子节点添加到根节点
+ * @param pParent
+ * @param pLeft
+ * @param pRight
+ */
 void ConnectTreeNodes(BinaryTreeNode* pParent, BinaryTreeNode* pLeft, BinaryTreeNode* pRight)
 {
     if(pParent != nullptr)
@@ -86,7 +92,7 @@ void PrintTree(const BinaryTreeNode* pRoot)
 }
 
 /**
- * 使用递归删除
+ * 使用递归删除整个二叉树
  * @param pRoot
  */
 void DestroyTree(BinaryTreeNode* pRoot)
