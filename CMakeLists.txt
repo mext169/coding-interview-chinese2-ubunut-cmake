@@ -13,3 +13,4 @@ add_executable(05PrintListInReversedOrder 05PrintListInReversedOrder.cpp Utiliti
 add_executable(06ConstructBinaryTree 06ConstructBinaryTree.cpp Utilities/BinaryTree.cpp)
 add_executable(07NextNodeInBinaryTrees 07NextNodeInBinaryTrees.cpp)
 add_executable(08QueueWithTwoStacks 08QueueWithTwoStacks.cpp)
+add_executable(08StackWithTwoQueues 08StackWithTwoQueues.cpp)
