@@ -113,4 +113,140 @@ C/C++会把`常量字符串`放到单独的一个内存区域。
 
 先入先出
 
+# 算法和数据操作
+
++ 递归
++ 循环
++ 二分查找
++ 归并排序
++ 快速排序
++ 回溯法
++  用栈模拟递归
++ 动态规划
++ 贪婪算法
++ 位运算
+
+## 递归和循环
+
+很多算法都有递归和循环两种实现方式，基于递归的方法比较简洁，但性能不及基于循环的方法。如果面试官没有要求，尽量采用递归的方法编程。
+
+**递归存在的问题**：
+
++ 递归由于是函数调用自身，而函数调用是有时间和空间的消耗的：每一次函数调用，都需要在内存栈中分配空间以保存参数、返回地址及临时变量，而且在往栈里压入数据和弹出数据都需要时间；
++ 递归中有可能很多计算都是重复的，从而对性能带来很大的负面影响。递归的本质是把一个问题分解成两个或多个小问题，如果多个小问题存在相互重叠的部分，就存在重复的计算；
++ 调用栈溢出。每一次函数调用都需要在内存栈中分配空间，而每个进程的栈的容量是有限的，当递归调用的层级太多时，就会超出栈的容量，从而导致调用栈溢出。
+
+### 计算斐波那契数列的3种
+
+**方法一 普通的递归**：由于子问题互相包含，因此计算效率很差
+
+```c++
+long long Fibonacci_Solution1(unsigned int n)
+{
+    if(n <= 0)
+        return 0;
+
+    if(n == 1)
+        return 1;
+
+    return Fibonacci_Solution1(n - 1) + Fibonacci_Solution1(n - 2);
+}
+```
+
+**方法二 基于循环实现**：保存了中间量，计算效率高，很实用
+
+```c++
+long long Fibonacci_Solution2(unsigned n)
+{
+    int result[2] = {0, 1};
+    if(n < 2)
+        return result[n];
+
+    long long  fibNMinusOne = 1;
+    long long  fibNMinusTwo = 0;
+    long long  fibN = 0;
+    for(unsigned int i = 2; i <= n; ++ i)
+    {
+        fibN = fibNMinusOne + fibNMinusTwo;
+
+        fibNMinusTwo = fibNMinusOne;
+        fibNMinusOne = fibN;
+    }
+    return fibN;
+}
+```
+
+**方法三 基于一个生僻的数学公式**：
+
+![](./img/Fabinacci_solution3.png)
+
+![](./img/n_square.png)
+
+```c++
+struct Matrix2By2
+{
+    Matrix2By2
+            (
+                    long long m00 = 0,
+                    long long m01 = 0,
+                    long long m10 = 0,
+                    long long m11 = 0
+            )
+            :m_00(m00), m_01(m01), m_10(m10), m_11(m11)
+    {
+    }
+
+    long long m_00;
+    long long m_01;
+    long long m_10;
+    long long m_11;
+};
+
+Matrix2By2 MatrixMultiply
+        (
+                const Matrix2By2& matrix1,
+                const Matrix2By2& matrix2
+        )
+{
+    return Matrix2By2(
+            matrix1.m_00 * matrix2.m_00 + matrix1.m_01 * matrix2.m_10,
+            matrix1.m_00 * matrix2.m_01 + matrix1.m_01 * matrix2.m_11,
+            matrix1.m_10 * matrix2.m_00 + matrix1.m_11 * matrix2.m_10,
+            matrix1.m_10 * matrix2.m_01 + matrix1.m_11 * matrix2.m_11);
+}
+
+Matrix2By2 MatrixPower(unsigned int n)
+{
+    assert(n > 0);
+
+    Matrix2By2 matrix;
+    if(n == 1)
+    {
+        matrix = Matrix2By2(1, 1, 1, 0);
+    }
+    else if(n % 2 == 0)
+    {
+        matrix = MatrixPower(n / 2);
+        matrix = MatrixMultiply(matrix, matrix);
+    }
+    else if(n % 2 == 1)
+    {
+        matrix = MatrixPower((n - 1) / 2);
+        matrix = MatrixMultiply(matrix, matrix);
+        matrix = MatrixMultiply(matrix, Matrix2By2(1, 1, 1, 0));
+    }
+
+    return matrix;
+}
+
+long long Fibonacci_Solution3(unsigned int n)
+{
+    int result[2] = {0, 1};
+    if(n < 2)
+        return result[n];
+
+    Matrix2By2 PowerNMinus2 = MatrixPower(n - 1);
+    return PowerNMinus2.m_00;
+}
+```
 

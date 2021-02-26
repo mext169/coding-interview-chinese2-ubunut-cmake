@@ -14,3 +14,5 @@ add_executable(06ConstructBinaryTree 06ConstructBinaryTree.cpp Utilities/BinaryT
 add_executable(07NextNodeInBinaryTrees 07NextNodeInBinaryTrees.cpp)
 add_executable(08QueueWithTwoStacks 08QueueWithTwoStacks.cpp)
 add_executable(08StackWithTwoQueues 08StackWithTwoQueues.cpp)
+add_executable(09Fibonacci 09Fibonacci.cpp)
+add_executable(10MinNumberInRotatedArray 10MinNumberInRotatedArray.cpp)
