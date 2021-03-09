@@ -27,3 +27,5 @@ add_executable(18_02_DeleteDuplicatedNode 18_02_DeleteDuplicatedNode.cpp Utiliti
 add_executable(19RegularExpressions 19RegularExpressions.cpp)
 add_executable(20NumericStrings 20NumericStrings.cpp)
 add_executable(21ReorderArray 21ReorderArray.cpp)
+add_executable(22KthNodeFromEnd 22KthNodeFromEnd.cpp Utilities/List.cpp)
+add_executable(23EntryNodeInListLoop 23EntryNodeInListLoop.cpp Utilities/List.cpp)
