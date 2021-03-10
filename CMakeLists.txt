@@ -32,3 +32,4 @@ add_executable(23EntryNodeInListLoop 23EntryNodeInListLoop.cpp Utilities/List.cp
 add_executable(24ReverseList 24ReverseList.cpp Utilities/List.cpp)
 add_executable(25MergeSortedLists 25MergeSortedLists.cpp Utilities/List.cpp)
 add_executable(26SubstructureInTree 26SubstructureInTree.cpp)
+add_executable(27MirrorOfBinaryTree 27MirrorOfBinaryTree.cpp Utilities/BinaryTree.cpp)
