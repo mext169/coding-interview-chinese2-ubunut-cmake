@@ -41,3 +41,7 @@ add_executable(32_01_PrintTreeFromTopToBottom 32_01_PrintTreeFromTopToBottom.cpp
 add_executable(32_02_PrintTreesInLines 32_02_PrintTreesInLines.cpp Utilities/BinaryTree.cpp)
 add_executable(32_03_PrintTreesInZigzag 32_03_PrintTreesInZigzag.cpp Utilities/BinaryTree.cpp)
 add_executable(33SquenceOfBST 33SquenceOfBST.cpp)
+add_executable(34PathInTree 34PathInTree.cpp Utilities/BinaryTree.cpp)
+add_executable(35CopyComplexList 35CopyComplexList.cpp Utilities/ComplexList.cpp)
+add_executable(36ConvertBinarySearchTree 36ConvertBinarySearchTree.cpp Utilities/BinaryTree.cpp)
+add_executable(37SerializeBinaryTrees 37SerializeBinaryTrees.cpp Utilities/BinaryTree.cpp)
