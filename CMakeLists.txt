@@ -37,3 +37,7 @@ add_executable(28SymmetricalBinaryTree 28SymmetricalBinaryTree.cpp Utilities/Bin
 add_executable(29PrintMatrix 29PrintMatrix.cpp)
 add_executable(30MinInStack 30MinInStack.cpp)
 add_executable(31StackPushPopOrder 31StackPushPopOrder.cpp)
+add_executable(32_01_PrintTreeFromTopToBottom 32_01_PrintTreeFromTopToBottom.cpp Utilities/BinaryTree.cpp)
+add_executable(32_02_PrintTreesInLines 32_02_PrintTreesInLines.cpp Utilities/BinaryTree.cpp)
+add_executable(32_03_PrintTreesInZigzag 32_03_PrintTreesInZigzag.cpp Utilities/BinaryTree.cpp)
+add_executable(33SquenceOfBST 33SquenceOfBST.cpp)
