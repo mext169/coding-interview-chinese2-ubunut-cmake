@@ -48,3 +48,4 @@ add_executable(37SerializeBinaryTrees 37SerializeBinaryTrees.cpp Utilities/Binar
 add_executable(38StringPermutation 38StringPermutation.cpp)
 add_executable(39MoreThanHalfNumber 39MoreThanHalfNumber.cpp Utilities/Array.cpp)
 add_executable(40KLeastNumbers 40KLeastNumbers.cpp Utilities/Array.cpp)
+add_executable(41StreamMedian 41StreamMedian.cpp)
