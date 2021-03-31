@@ -64,3 +64,4 @@ add_executable(52FirstCommonNodesInLists 52FirstCommonNodesInLists.cpp Utilities
 add_executable(53_01_NumberOfK 53_01_NumberOfK.cpp)
 add_executable(53_02_MissingNumber 53_02_MissingNumber.cpp)
 add_executable(53_03_IntegerIdenticalToIndex 53_03_IntegerIdenticalToIndex.cpp)
+add_executable(54KthNodeInBST 54KthNodeInBST.cpp Utilities/BinaryTree.cpp)
