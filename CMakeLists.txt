@@ -70,3 +70,4 @@ add_executable(55_02_BalancedBinaryTree 55_02_BalancedBinaryTree.cpp Utilities/B
 add_executable(56_01_NumbersAppearOnce 56_01_NumbersAppearOnce.cpp)
 add_executable(56_02_NumberAppearingOnce 56_02_NumberAppearingOnce.cpp)
 add_executable(57_01_TwoNumbersWithSum 57_01_TwoNumbersWithSum.cpp)
+add_executable(57_02_ContinuousSquenceWithSum 57_02_ContinuousSquenceWithSum.cpp)
