@@ -75,3 +75,4 @@ add_executable(58_01_ReverseWordsInSentence 58_01_ReverseWordsInSentence.cpp Uti
 add_executable(58_02_LeftRotateString 58_02_LeftRotateString.cpp Utilities/StringUtil.cpp)
 add_executable(59_01_MaxInSlidingWindow 59_01_MaxInSlidingWindow.cpp)
 add_executable(59_02_QueueWithMax 59_02_QueueWithMax.cpp)
+add_executable(60DicesProbability 60DicesProbability.cpp)
