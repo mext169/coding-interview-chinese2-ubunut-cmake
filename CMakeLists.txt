@@ -76,3 +76,4 @@ add_executable(58_02_LeftRotateString 58_02_LeftRotateString.cpp Utilities/Strin
 add_executable(59_01_MaxInSlidingWindow 59_01_MaxInSlidingWindow.cpp)
 add_executable(59_02_QueueWithMax 59_02_QueueWithMax.cpp)
 add_executable(60DicesProbability 60DicesProbability.cpp)
+add_executable(61ContinousCards 61ContinousCards.cpp)
