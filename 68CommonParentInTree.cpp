@@ -72,6 +72,7 @@ const TreeNode* GetLastCommonNode
 
 const TreeNode* GetLastCommonParent(const TreeNode* pRoot, const TreeNode* pNode1, const TreeNode* pNode2)
 {
+    // 输入检测
     if(pRoot == nullptr || pNode1 == nullptr || pNode2 == nullptr)
         return nullptr;
 
